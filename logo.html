@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GAMEFY Logo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1e3a8a;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .logo-container {
+      position: relative;
+      text-align: center;
+      animation: floatIn 2s ease-out forwards;
+      transform: scale(0.95);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .logo-container:hover {
+      transform: scale(1.03);
+    }
+
+    .logo-image {
+      width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      animation: bounce 4s infinite ease-in-out;
+      cursor: pointer;
+    }
+
+    .logo-text {
+      margin-top: 20px;
+      font-size: 48px;
+      color: #ffffff;
+      letter-spacing: 8px;
+      text-shadow: 2px 2px #00000066;
+      animation: fadeIn 2s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="C:\Users\faroo\OneDrive\Desktop\game\ChatGPT Image Jul 25, 2025, 09_05_17 AM.png" alt="Gamefy Logo" class="logo-image" />
+    <h1 class="logo-text">GAMEFY</h1>
+  </div>
+
+  <script>
+    document.querySelector(".logo-image").addEventListener("click", () => {
+      alert("Welcome to GAMEFY!");
+      window.location.href = "home.html"; // Redirect to home page
+    });
+  </script>
+</body>
+</html>
